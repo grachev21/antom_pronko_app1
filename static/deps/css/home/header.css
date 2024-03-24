@@ -1,3 +1,15 @@
-body {
-    background-color: red;
+header{
+    z-index: 50;
 }
+.show_home_block {
+    display: none;
+    width: 900px;
+    height: 500px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* 330 300 */
