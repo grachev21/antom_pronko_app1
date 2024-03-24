@@ -1,0 +1,36 @@
+.block_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block_title>.title h1 {
+    font-family: Montserrat, Arial, sans-serif;
+    text-decoration-thickness: 1px;
+    font-weight: lighter;
+}
+
+.block_title>.availability {
+    border: 1px solid rgba(153, 153, 153, .35);
+    padding: 2px 6px 3px;
+    margin-left: 20px;
+    color: #999;
+    font: Montserrat, Arial, sans-serif;
+}
+
+.content>.categories {
+    margin-top: 20px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content>.categories p {
+    padding-right: 30px;
+}
