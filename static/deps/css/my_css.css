@@ -1,36 +1,27 @@
-.dropdown-toggle::after {
-  content: none;
+:root {
+  --text-color: #161616;
+  --background-color: rgb(255, 255, 255);
+  --border-color: rgb(111, 179, 111);
+  --margin-right: 18px;
+
 }
 
-.product_id {
-  color: gray;
-  font-size: 15px;
+.block-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
 
-.badge.bg-warning.text-dark {
+.content {
+  font-family: "Montserrat", sans-serif;
+  width: 90%;
+}
+
+.background {
+  width: 100%;
   position: absolute;
-  top: 10px;
-  right: 5px;
-  z-index: 1;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 1rem;
-  box-shadow: 2px 2px 15px 9px #000000;
+  left: 0;
+  z-index: -1;
 }
 
-.badge-banner {
-  top: 80%;
-  border-radius: 15px;
-  font-size: 0.7rem;
-}
-.background-section {
-  background: url('../images/main_bg_img.jpg') no-repeat center center;
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* 100% от высоты вьюпорта */
-  width: 100%; /* 100% от ширины экрана */
-}
-
-.br0 {
-  border-radius: 0px !important;
-}
