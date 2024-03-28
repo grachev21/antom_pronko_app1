@@ -44,7 +44,7 @@
   width: 0;
   height: 2px;
   /* Высота линии */
-  background-color: black;
+  background-color: var(--background-color);
   /* Цвет подчеркивания при исчезании линии*/
   transition: width 0.5s;
   /* Время эффекта */

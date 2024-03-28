@@ -1,12 +1,12 @@
-window.onload = function donenow() {
-
+export function headers() {
+    console.log("x")
     document.querySelector("body").onmouseover = function (event) {
         let target = event.target
         show(target.className)
     }
 
     function show(el) {
-        if (el == "link_home") {
+        if (el == "link_home activ_hover_after") {
             document.querySelector('.show_home_block').classList.remove("block_deactivate");
             document.querySelector('.show_home_block').classList.add("block_activate");
         }
@@ -16,7 +16,5 @@ window.onload = function donenow() {
             document.querySelector('.show_home_block').classList.remove("block_activate");
             document.querySelector('.show_home_block').classList.add("block_deactivate");
         }
-        // console.log(document.querySelector(".show_home_block").className)
     }
-
 }
