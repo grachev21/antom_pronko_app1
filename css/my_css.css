@@ -1,12 +1,14 @@
 @import url("/css/home/header.css");
 @import url("/css/settings.css");
 @import url("/css/home/show_home_block.css");
+@import url("/css/adaptability.css");
 
 :root {
   --text-color: #161616;
   --background-color: rgb(255, 255, 255);
   --border-color: rgb(111, 179, 111);
   --margin-right: 18px;
+  --shadow: rgb(221, 221, 221);
 
 }
 
@@ -15,6 +17,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
+  min-width: 3140;
 }
 
 .content {

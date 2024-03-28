@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   height: 70px;
@@ -7,7 +8,7 @@
 
 .info_text {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   align-content: flex-end;
   flex-wrap: nowrap;
@@ -17,8 +18,9 @@
   z-index: 50;
 }
 
-div.info_text a {
+.info_text  a {
   font-size: .9em;
+  font-weight: 500;
   position: relative;
   z-index: 50;
   color: var(--text-color);
@@ -26,12 +28,45 @@ div.info_text a {
   margin-right: .5em;
 }
 
-.link_home {
+.info_text > a:nth-child(1) {
   font-size: 1.1em;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+.activ_hover_after:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  /* Высота линии */
+  background-color: black;
+  /* Цвет подчеркивания при исчезании линии*/
+  transition: width 0.5s;
+  /* Время эффекта */
+}
+
+.activ_hover_after:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  /* Высота линии */
+  background-color: var(--border-color);
+  /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.5s;
+  /* Время эффекта */
+}
+
+
+
 
 
 div.search>form {
@@ -101,13 +136,12 @@ div.search>form {
 
 .show_home_block {
   display: flex;
-  /* background-color: red; */
   justify-content: flex-end;
   flex-direction: column;
   align-content: flex-end;
   z-index: -50;
   width: 900px;
-  height: 600px;
+  height: 780px;
   position: absolute;
   top: 300px;
   left: 50%;
@@ -118,7 +152,7 @@ div.search>form {
 .show_home_block>.block_img {
   width: 100%;
   background-color: var(--background-color);
-  height: 500px;
+  height: 600px;
   margin-bottom: 0px;
 }
 
@@ -135,5 +169,3 @@ div.search>form {
   opacity: 0%;
   transition: opacity 1s, top .3s, z-index 4s;
 }
-
-.
