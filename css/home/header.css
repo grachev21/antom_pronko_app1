@@ -65,10 +65,6 @@
   /* Время эффекта */
 }
 
-
-
-
-
 div.search>form {
   display: flex;
   flex-wrap: nowrap;
@@ -144,7 +140,6 @@ div.search>form {
   height: 780px;
   position: absolute;
   top: 300px;
-  left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0%;
 }
