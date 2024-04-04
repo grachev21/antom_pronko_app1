@@ -1,104 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/my_css.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
 
     <!-- Favicons for different platforms -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
     <title></title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="block-content">
-        <div class="content">
-            <div class="header">
+      <div class="content">
+        {% block header %}
+        {% endblock %}
 
-                <img class="menu_open" src="./icons/free-icon-menu-bar-8111040.png" alt="">
-                <div id="check_block" class="show_home_block">
-                    <div class="block_img">
-                        <div class="img">
-                            <a href="">
-                                <img src="./images/homeImages/bn0.png" alt="">
-                            </a>
-
-                            <a href="">
-                                <h6>Главная 1</h6>
-                                <div class="line"></div>
-                            </a>
-                        </div>
-
-                        <div class="img">
-                            <a href="">
-                                <img src="./images/homeImages/bn0.png" alt="">
-                            </a>
-                            <a href="">
-                                <h6>Главная 1</h6>
-                                <div class="line"></div>
-                            </a>
-                        </div>
-
-                        <div class="img">
-                            <a href="">
-                                <img src="./images/homeImages/bn0.png" alt="">
-                            </a>
-                            <a href="">
-                                <h6>Главная 1</h6>
-                                <div class="line"></div>
-                            </a>
-                        </div>
-
-                        <div class="img">
-                            <a href="">
-                                <img src="./images/homeImages/bn0.png" alt="">
-                            </a>
-                            <a href="">
-                                <h6>Главная 1</h6>
-                                <div class="line"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info_text">
-                    <div class="panel">
-                        <a class="menu">
-                            <img src="icons/free-icon-menu-bar-8111040.png">
-                            <div class="title">MENU</div>
-                        </a>
-                        <a class="login">
-                            <img src="icons/user.svg">
-                            <div class="title">LOGIN</div>
-                        </a>
-                    </div>
-                    <a id="link_home" class="link_home" href="">Главная</a>
-                    <a class="catalog" href="">Каталог</a>
-                    <a class="information" href="">Информация</a>
-                    <a class="help" href="">Помощь в выборе</a>
-                </div>
-                <a class="nav-link  text-white" href="">Корзина</a>
-                <div class="search">
-                    <form class="d-flex me-1" role="search" action="" method="get">
-                        <input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search">
-                        <button type="submit">Поиск</button>
-                    </form>
-                </div>
-                <img src="./icons/user.svg" alt="Profile Icon" width="24" height="24">
-                <a class="nav-link  text-black" href="">Войти</a>
-
-
-            </div>
-            <img src="/images/main_bg_img.jpg" alt="" class="background">
-        </div>
+        <img src="{% static '/images/main_bg_img.jpg' %}" alt="" class="background" />
+      </div>
     </div>
 
-    <script src="/js/home.js"></script>
-
-</body>
-
+    <script src="{% static '/js/home.js' %}"></script>
+  </body>
 </html>

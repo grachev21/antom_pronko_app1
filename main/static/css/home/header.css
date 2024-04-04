@@ -136,19 +136,12 @@ div.search>form {
   flex-direction: column;
   align-content: flex-end;
   z-index: -50;
-  width: 900px;
-  height: 780px;
+  width: 700px;
+  height: 700px;
   position: absolute;
   top: 300px;
   transform: translate(-50%, -50%);
   opacity: 0%;
-}
-
-.show_home_block>.block_img {
-  width: 100%;
-  background-color: var(--background-color);
-  height: 600px;
-  margin-bottom: 0px;
 }
 
 .block_activate {
@@ -163,4 +156,12 @@ div.search>form {
   top: 300px;
   opacity: 0%;
   transition: opacity 1s, top .3s, z-index 4s;
+}
+
+.show_home_block>.block_img {
+  display: flex;
+  align-content: flex-end;
+  background-color: var(--background-color);
+  height: 600px;
+  margin-bottom: 0px;
 }

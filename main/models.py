@@ -1,4 +1,5 @@
 from django.db import models
+from users.models import CustomUser 
 
 '''
 загаловок
@@ -19,12 +20,14 @@ class AvailabilityStatus(models.Model):
 class Goods(models.Model):
     title = models.CharField(max_length=100, verbose_name='Загловок')
     vendor_code  = models.CharField(max_length=100, verbose_name='Артикул')
-    availability = models.CharField(max_length=100, verbose_name='Статус наличия')
+    availability = models.ForeignKey(AvailabilityStatus, on_delete=models.CASCADE, verbose_name='Категория')
     characteristic = models.CharField(max_length=100, verbose_name='Характеристика')
     photo = models.CharField(max_length=100, verbose_name='Фотографии')
     description = models.TextField(verbose_name='Описание')
-    category  = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category  = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
 
 
 class Basket(models.Model):
-    pass
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, verbose_name='Ползователь')
+    vendor_code  = models.CharField(max_length=100, verbose_name='Артикул')
+

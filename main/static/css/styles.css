@@ -1,7 +1,7 @@
-@import url("/css/home/header.css");
-@import url("/css/settings.css");
-@import url("/css/home/show_home_block.css");
-@import url("/css/adaptability.css");
+@import url("./home/header.css");
+@import url("./settings.css");
+@import url("./home/show_home_block.css");
+@import url("./adaptability.css");
 
 :root {
   --text-color: #161616;
@@ -22,7 +22,7 @@
 
 .content {
   font-family: "Montserrat", sans-serif;
-  width: 90%;
+  width: 1400px;
 }
 
 .background {
