@@ -39,20 +39,22 @@ window.onload = function main() {
             }
         }
         function show(class_name, name, block) {
+
+            let style = getComputedStyle(document.querySelector(".show_home_block"))
             let left = document.getElementById(name).offsetLeft
-            let on = `z-index: 50; top: 40px; opacity: 100%; transition: opacity 1s, top .5s; left: ${left - 20}px;`
+            let on = `z-index: 50; top: 40px; opacity: 100%; transition: opacity 1s, top .3s; left: ${left - 20}px;`
             document.querySelector(".show_home_block").style.cssText = on
             document.querySelector(block).style.cssText = `visibility: inherit;`
         }
 
         function hide(params) {
             let left = document.getElementById("show_home_block").offsetLeft
-            let off = `visibility: hidden; top: 83px; left: ${left}px; opacity: 0%; transition: .4s;`
+            let off = `visibility: hidden; top: 83px; left: ${left}px; opacity: 0%; transition: .1s;`
             document.querySelector(".show_home_block").style.cssText = off
 
             let all_blocks = document.getElementById("show_home_block").children
             for (let index = 0; index < all_blocks.length; index++) {
-                all_blocks[index].style.cssText = `visibility: hidden; transition: visibility .3s;`
+                all_blocks[index].style.cssText = `visibility: hidden; transition: .1s;`
             }
         }
     }
