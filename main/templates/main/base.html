@@ -1,28 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
 
-    <!-- Favicons for different platforms -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
 
-    <title></title>
-  </head>
+  <!-- Favicons for different platforms -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <div class="block-content">
-      <div class="content">
-        {% block header %}
-        {% endblock %}
+  <title></title>
+</head>
 
-        <img src="{% static '/images/main_bg_img.jpg' %}" alt="" class="background" />
-      </div>
+<body>
+  <div class="block-content">
+    <div class="content">
+      {% block header %}{% endblock %}
+
+      {% block content %}{% endblock content %}
+
+
+      <img src="{% static '/images/main_bg_img.jpg' %}" alt="" class="background" />
     </div>
+  </div>
 
-    <script src="{% static '/js/home.js' %}"></script>
-  </body>
+  <script mo></script>
+  <script src="{% static './js/home.js' %}"></script>
+  <script type="module" src=".{% static './link.js' %}">
+  </script>
+</body>
+
 </html>

@@ -139,7 +139,9 @@ a {
 }
 
 .background {
+  top: 0px;
   width: 100%;
+  height: 700px;
   position: absolute;
   left: 0;
   z-index: -1;
@@ -360,4 +362,47 @@ div.search>form {
   cursor: pointer;
   width: 30px;
   height: 30px;
+}
+
+/*Slogan ********************************** */
+.slogan_block {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin: 20px;
+  }
+
+  a {
+    margin: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--text-color);
+    padding: 10px 30px;
+    color: var(--background-color);
+    font-size: .7em;
+  }
+
+  a:hover {
+    transition: .5s;
+    background-color: var(--border-color);
+  }
+
+  a:after {
+    content: "";
+    transition: .5s;
+    background-color: var(--text-color);
+  }
 }

@@ -1,5 +1,6 @@
-window.onload = function main() {
 
+
+window.onload = function main() {
 
     // Check window ***************************
     if (window.innerWidth < 1200) {
@@ -40,6 +41,7 @@ window.onload = function main() {
         }
         function show(class_name, name, block) {
 
+
             let left = document.getElementById(name).offsetLeft
             let on = `z-index: 50; top: 40px; opacity: 100%; transition: opacity 1s, top .3s; left: ${left - 20}px;`
             document.querySelector(".show_home_block").style.cssText = on
@@ -68,7 +70,6 @@ window.onload = function main() {
 
             document.querySelector("body").onclick = function (event) {
                 let target = event.target
-                // console.log(target.className)
                 if (target.className == "menu_open") {
                     document.querySelector(".info_text").setAttribute("style", "left: 0px; transition: left .3s;")
                 } else {
@@ -99,5 +100,4 @@ window.onload = function main() {
     function turnPanel() {
 
     }
-
 }
