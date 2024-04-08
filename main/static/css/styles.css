@@ -130,7 +130,6 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
-  min-width: 3140;
 }
 
 .content {
@@ -392,17 +391,27 @@ div.search>form {
     background-color: var(--text-color);
     padding: 10px 30px;
     color: var(--background-color);
-    font-size: .7em;
+    font-size: .9em;
   }
+}
 
-  a:hover {
-    transition: .5s;
-    background-color: var(--border-color);
-  }
+/*Images line ***************************** */
 
-  a:after {
-    content: "";
-    transition: .5s;
-    background-color: var(--text-color);
-  }
+.images_line {
+  width: 100%;
+  height: 200px;
+  background-color: red;
+}
+
+.images_line>.block_line {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.images_line>.block_line>.img_block img {
+  width: 300px;
+  height: 200px;
 }
