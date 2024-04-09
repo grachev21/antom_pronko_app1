@@ -4,7 +4,7 @@
 
 {% block header %}
 <div class="header">
-  <img class="menu_open" src="./icons/free-icon-menu-bar-8111040.png" alt="" />
+  <img class="menu_open" src="{% static './icons/free-icon-menu-bar-8111040.png' %}" alt="" />
 
   <div id="show_home_block" class="show_home_block">
     {% show_home_block %}
@@ -14,11 +14,11 @@
   <div class="info_text">
     <div class="panel">
       <a class="menu">
-        <img src="icons/free-icon-menu-bar-8111040.png" />
+        <img src="{% static 'icons/free-icon-menu-bar-8111040.png' %}" />
         <div class="title">MENU</div>
       </a>
       <a class="login">
-        <img src="icons/user.svg" />
+        <img src="{% static 'icons/user.svg' %}" />
         <div class="title">LOGIN</div>
       </a>
     </div>
@@ -34,7 +34,7 @@
       <button type="submit">Поиск</button>
     </form>
   </div>
-  <img src="./icons/user.svg" alt="Profile Icon" width="24" height="24" />
+  <img src="{% static './icons/user.svg' %} " alt="Profile Icon" width="24" height="24" />
   <a class="nav-link text-black" href="">Войти</a>
 </div>
 {% endblock %}
@@ -52,19 +52,32 @@
 <div class="images_line">
   <div class="block_line">
     <div class="img_block">
-      <img src="{% static 'images/bn1.png' %}" alt="">
+      <div class="links_shop">
+        <a>Улун</a>
+        <a class="links" >КУПИТЬ</a>
+      </div>
+      <img src="{% static 'images/line_1.png' %}" alt="">
     </div>
     <div class="img_block">
-      <img src="{% static 'images/bn1.png' %}" alt="">
+      <div class="links_shop">
+        <a>Зеленый</a>
+        <a class="links" >КУПИТЬ</a>
+      </div>
+      <img src="{% static 'images/line_2.png' %}" alt="">
     </div>
     <div class="img_block">
-      <img src="{% static 'images/bn1.png' %}" alt="">
+      <div class="links_shop">
+        <a>Травянной</a>
+        <a class="links" >КУПИТЬ</a>
+      </div>
+      <img src="{% static 'images/line_3.png' %}" alt="">
     </div>
     <div class="img_block">
-      <img src="{% static 'images/bn1.png' %}" alt="">
-    </div>
-    <div class="img_block">
-      <img src="{% static 'images/bn1.png' %}" alt="">
+      <div class="links_shop">
+        <a>Цветочный</a>
+        <a class="links" >КУПИТЬ</a>
+      </div>
+      <img src="{% static 'images/line_4.png' %}" alt="">
     </div>
   </div>
 

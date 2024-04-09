@@ -1,7 +1,4 @@
-
-
 window.onload = function main() {
-
     // Check window ***************************
     if (window.innerWidth < 1200) {
         mobile(true)
@@ -21,7 +18,6 @@ window.onload = function main() {
             show_block(true)
         }
     });
-
 
     // Show block *****************************
     function show_block(flag) {
@@ -91,13 +87,28 @@ window.onload = function main() {
         }
     }
     function offHoverAfter() {
-        let activ_hover = document.querySelectorAll(".info_text > a")
+        let activ_hover = document.querySelectorAll(".info_text > a");
         for (let index = 0; index < activ_hover.length; index++) {
             activ_hover[index].classList.remove("activ_hover_after");
         }
     }
 
-    function turnPanel() {
+    // Images line ****************************************
+    const links = document.querySelectorAll(".links_shop>.links");
+    const img = document.querySelectorAll(".img_block img");
 
+    for (let index = 0; index < links.length; index++) {
+
+        links[index].addEventListener("mouseover",
+            function () { this.classList.add("links_activate"); });
+
+        img[index].addEventListener("mouseover",
+            function () { this.classList.add("zoom"); });
+
+        img[index].addEventListener("mouseout",
+            function () { this.classList.remove("zoom"); });
     }
+
+
+
 }

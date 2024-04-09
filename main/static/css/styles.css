@@ -118,10 +118,57 @@ a {
 :root {
   --text-color: #161616;
   --background-color: rgb(255, 255, 255);
-  --border-color: rgb(111, 179, 111);
+  --border-color: rgb(147, 193, 147);
   --margin-right: 18px;
   --shadow: rgb(221, 221, 221);
 
+}
+
+
+/*Animation links ************************* */
+.links_activate {
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+.links_activate:hover {
+  color: var(--border-color);
+  transition: color 0.5s;
+  /* Время эффекта */
+}
+
+.links_activate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  /* Высота линии */
+  background-color: var(--text-color);
+  /* Цвет подчеркивания при исчезании линии*/
+  transition: width 0.5s;
+  /* Время эффекта */
+}
+
+.links_activate:hover::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  /* Высота линии */
+  background-color: var(--border-color);
+  /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.5s;
+  /* Время эффекта */
+}
+
+/*Zoom ************************************ */
+.zoom {
+  transform: scale(1.1); /* Увеличиваем масштаб */
 }
 
 /*Content ********************************* */
@@ -144,6 +191,8 @@ a {
   position: absolute;
   left: 0;
   z-index: -1;
+  background-position: center;
+  object-fit: cover;
 }
 
 /*Header ********************************** */
@@ -182,30 +231,6 @@ a {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
-}
-
-.activ_hover_after:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: -3px;
-  width: 0;
-  height: 2px;
-  background-color: var(--border-color);
-  transition: width 0.5s;
-}
-
-.activ_hover_after:hover:after {
-  content: "";
-  width: 100%;
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  height: 2px;
-  background-color: var(--border-color);
-  transition: width 0.5s;
 }
 
 div.search>form {
@@ -400,7 +425,7 @@ div.search>form {
 .images_line {
   width: 100%;
   height: 200px;
-  background-color: red;
+  margin-top: 360px;
 }
 
 .images_line>.block_line {
@@ -411,7 +436,42 @@ div.search>form {
   flex-direction: row;
 }
 
+.images_line>.block_line>.img_block {
+  position: relative;
+  margin: 20px;
+  width: 230px;
+  height: 240px;
+}
+
 .images_line>.block_line>.img_block img {
-  width: 300px;
+  transition: transform .8s; /* Animation */
+  width: 290px;
   height: 200px;
+  margin: 0 auto;
+  background-position: center;
+  object-fit: cover;
+}
+
+.links_shop {
+  display: flex;
+  z-index: 50;
+  flex-direction: column;
+  position: absolute;
+  text-align: right;
+  right: 4px;
+  bottom: 10px;
+}
+
+.links_shop a {
+  font-size: 1.3em;
+  font-weight: 650;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.links_shop>.links {
+  font-size: 1.3em;
+  font-weight: 450;
+  padding: 6px;
+  cursor: pointer;
 }
