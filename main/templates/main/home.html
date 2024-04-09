@@ -40,47 +40,209 @@
 {% endblock %}
 
 
-{% block content %}
+
+{% block slogan %}
+  
+  
 <div class="slogan_block">
   <p>Вам нужно</p>
   <h1 class="title">Производство Лучшего Чая</h1>
   <p>Чай от нашего производства</p>
   <a href="" class="learn_more">УЗНАТЬ БОЛЬШЕ</a>
 </div>
+{% endblock slogan %}
 
 
+{% block images_line %}
 <div class="images_line">
   <div class="block_line">
     <div class="img_block">
       <div class="links_shop">
         <a>Улун</a>
-        <a class="links" >КУПИТЬ</a>
+        <a class="links">КУПИТЬ</a>
       </div>
       <img src="{% static 'images/line_1.png' %}" alt="">
     </div>
     <div class="img_block">
       <div class="links_shop">
         <a>Зеленый</a>
-        <a class="links" >КУПИТЬ</a>
+        <a class="links">КУПИТЬ</a>
       </div>
       <img src="{% static 'images/line_2.png' %}" alt="">
     </div>
     <div class="img_block">
       <div class="links_shop">
         <a>Травянной</a>
-        <a class="links" >КУПИТЬ</a>
+        <a class="links">КУПИТЬ</a>
       </div>
       <img src="{% static 'images/line_3.png' %}" alt="">
     </div>
     <div class="img_block">
       <div class="links_shop">
         <a>Цветочный</a>
-        <a class="links" >КУПИТЬ</a>
+        <a class="links">КУПИТЬ</a>
       </div>
       <img src="{% static 'images/line_4.png' %}" alt="">
     </div>
   </div>
+</div>
+{% endblock images_line %}
+
+
+{% block hot_deal %}
+<div class="hot_deal">
+  <p class="deal">ГОРЯЧЕЕ ПРЕДЛОЖЕНИЕ</p>
+  <div class="green_line"></div>
+  <p class="comment">Не пропустите горячее предложение</p>
+
+  <!-- Images -->
+  <div class="item_images_block">
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+    <a class="item_images" href="">
+      <img src="{% static 'images/bn0.png' %}" alt="">
+      <div class="panel_links">
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/menu.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/search.png' %}" alt="">
+        </div>
+        <div class="block_panel_links">
+          <img href="asdf" src="{% static 'icons/love.png' %}" alt="">
+        </div>
+      </div>
+      <div class="price_block">
+        <h3>Зазвание</h3>
+        <p>$23.00</p>
+      </div>
+    </a>
+
+  </div>
 
 </div>
-
-{% endblock content %}
+{% endblock hot_deal %}

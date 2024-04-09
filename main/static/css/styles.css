@@ -117,6 +117,7 @@ a {
 
 :root {
   --text-color: #161616;
+  --text-color-grey: #666666;
   --background-color: rgb(255, 255, 255);
   --border-color: rgb(147, 193, 147);
   --margin-right: 18px;
@@ -130,10 +131,10 @@ a {
   color: var(--text-color);
   transition: color 0.5s;
 }
+
 .links_activate:hover {
   color: var(--border-color);
   transition: color 0.5s;
-  /* Время эффекта */
 }
 
 .links_activate::after {
@@ -144,11 +145,8 @@ a {
   bottom: -3px;
   width: 0;
   height: 3px;
-  /* Высота линии */
   background-color: var(--text-color);
-  /* Цвет подчеркивания при исчезании линии*/
   transition: width 0.5s;
-  /* Время эффекта */
 }
 
 .links_activate:hover::after {
@@ -159,16 +157,13 @@ a {
   left: 0;
   bottom: -3px;
   height: 3px;
-  /* Высота линии */
   background-color: var(--border-color);
-  /* Цвет подчеркивания при появлении линии*/
   transition: width 0.5s;
-  /* Время эффекта */
 }
 
 /*Zoom ************************************ */
 .zoom {
-  transform: scale(1.1); /* Увеличиваем масштаб */
+  transform: scale(1.1);
 }
 
 /*Content ********************************* */
@@ -190,7 +185,7 @@ a {
   height: 700px;
   position: absolute;
   left: 0;
-  z-index: -1;
+  z-index: -50;
   background-position: center;
   object-fit: cover;
 }
@@ -444,7 +439,8 @@ div.search>form {
 }
 
 .images_line>.block_line>.img_block img {
-  transition: transform .8s; /* Animation */
+  transition: transform .8s;
+  /* Animation */
   width: 290px;
   height: 200px;
   margin: 0 auto;
@@ -474,4 +470,111 @@ div.search>form {
   font-weight: 450;
   padding: 6px;
   cursor: pointer;
+}
+
+/*Hot deal ******************************** */
+.hot_deal {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.hot_deal>.deal {
+  font-size: 1.6em;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.hot_deal>.green_line {
+  background-color: var(--border-color);
+  width: 130px;
+  height: 4px;
+  margin: 30px;
+}
+
+.hot_deal>.comment {
+  color: var(--text-color-grey);
+  font-size: 1.2em;
+  font-weight: 390;
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+}
+
+/* Images */
+.item_images_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.item_images {
+  position: relative;
+  width: 240px;
+  height: 350px;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+}
+
+.item_images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Title and price */
+.price_block>h3 {
+  color: var(--text-color);
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.price_block p {
+  margin-top: 20px;
+  color: var(--border-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Icons */
+.panel_links {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row;
+  bottom: 50px;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  opacity: 0%;
+  z-index: 50;
+}
+
+.block_panel_links {
+  background-color: var(--background-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.block_panel_links img {
+  width: 20px;
+  height: 20px;
+}
+
+.invert_icons {
+  filter: invert(100%);
+  background: rgb(191, 47, 213);
+  transition: .5s;
 }

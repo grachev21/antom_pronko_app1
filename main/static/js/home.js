@@ -102,13 +102,39 @@ window.onload = function main() {
         links[index].addEventListener("mouseover",
             function () { this.classList.add("links_activate"); });
 
-        img[index].addEventListener("mouseover",
+        img[index].addEventListener("mouseenter",
             function () { this.classList.add("zoom"); });
-
-        img[index].addEventListener("mouseout",
+        img[index].addEventListener("mouseleave",
             function () { this.classList.remove("zoom"); });
     }
 
 
+    const images_hot_deal = document.querySelectorAll(".item_images");
+    const panel_links = document.querySelectorAll(".panel_links")
+    const icons = document.querySelectorAll("div.block_panel_links")
+
+    for (let index = 0; index < images_hot_deal.length; index++) {
+        images_hot_deal[index].addEventListener("mouseover",
+            function () { panel_links[index].style.cssText = `opacity: 100%; bottom: 120px; transition: .5s;` }
+        )
+        images_hot_deal[index].addEventListener("mouseleave",
+            function () { panel_links[index].style.cssText = `opacity: 0%; bottom: 50px; transition: .5s;` }
+        )
+    }
+
+    for (let index = 0; index < icons.length; index++) {
+        icons[index].addEventListener("mouseover",
+            function () { icons[index].classList.add("invert_icons") }
+        )
+        icons[index].addEventListener("mouseleave",
+            function () { icons[index].classList.remove("invert_icons") }
+        )
+
+    }
+
+
+
 
 }
+
+
