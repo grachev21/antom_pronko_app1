@@ -115,10 +115,10 @@ window.onload = function main() {
 
     for (let index = 0; index < images_hot_deal.length; index++) {
         images_hot_deal[index].addEventListener("mouseover",
-            function () { panel_links[index].style.cssText = `opacity: 100%; bottom: 120px; transition: .5s;` }
+            function () { panel_links[index].style.cssText = `opacity: 70%; bottom: 120px; transition: .9s;` }
         )
         images_hot_deal[index].addEventListener("mouseleave",
-            function () { panel_links[index].style.cssText = `opacity: 0%; bottom: 50px; transition: .5s;` }
+            function () { panel_links[index].style.cssText = `opacity: 0%; bottom: 50px; transition: .9s;` }
         )
     }
 
@@ -129,9 +129,28 @@ window.onload = function main() {
         icons[index].addEventListener("mouseleave",
             function () { icons[index].classList.remove("invert_icons") }
         )
-
     }
 
+
+    const photo_blog = document.querySelectorAll(".photo_blog img");
+    for (let index = 0; index < photo_blog.length; index++) {
+        photo_blog[index].addEventListener("mouseover",
+            function () { this.classList.add("zoom") }
+        )
+        photo_blog[index].addEventListener("mouseleave",
+            function () { this.classList.remove("zoom") }
+        )
+    }
+
+    const instagram = document.querySelectorAll(".instagram_img > a > img");
+    for (let index = 0; index < instagram.length; index++) {
+        instagram[index].addEventListener("mouseover",
+            function () { this.classList.add("zoom", "blackout") }
+        )
+        instagram[index].addEventListener("mouseleave",
+            function () { this.classList.remove("zoom", "blackout") }
+        )
+    }
 
 
 
