@@ -4,24 +4,15 @@
 
 {% block header %}
 <div class="header">
+  {% mobile_menu %}
   <img class="menu_open" src="{% static './icons/free-icon-menu-bar-8111040.png' %}" alt="" />
 
   <div id="show_home_block" class="show_home_block">
     {% show_home_block %}
-    {% show_home_catalog%}
+    {% show_home_catalog %}
   </div>
 
   <div class="info_text">
-    <div class="panel">
-      <a class="menu">
-        <img src="{% static 'icons/free-icon-menu-bar-8111040.png' %}" />
-        <div class="title">MENU</div>
-      </a>
-      <a class="login">
-        <img src="{% static 'icons/user.svg' %}" />
-        <div class="title">LOGIN</div>
-      </a>
-    </div>
     <a id="link_home" class="link_home" href="">Главная</a>
     <a id="catalog" class="catalog" href="">Каталог</a>
     <a id="information" class="information" href="">Информация</a>
@@ -279,13 +270,41 @@
   <h1>instagram</h1>
   <div class="green_line"></div>
   <div class="instagram_img">
-    <a href="">
-      <img src="{% static 'images/instagram1.png' %}" alt="">
-    </a>
-    <a href=""><img src="{% static 'images/instagram2.png' %}" alt=""></a>
-    <a href=""><img src="{% static 'images/instagram3.png' %}" alt=""></a>
-    <a href=""><img src="{% static 'images/instagram4.png' %}" alt=""></a>
-    <a href=""><img src="{% static 'images/instagram5.png' %}" alt=""></a>
+    <div class="instagram_content">
+      <a href="">
+        <img class="instagram_photo" src="{% static 'images/instagram1.png' %}" alt="">
+        <img class="instagram_icon" src="{% static 'icons/instagram.png' %}" alt="">
+      </a>
+    </div>
+
+    <div class="instagram_content">
+      <a href="">
+        <img class="instagram_photo" src="{% static 'images/instagram2.png' %}" alt="">
+        <img class="instagram_icon" src="{% static 'icons/instagram.png' %}" alt="">
+      </a>
+    </div>
+
+    <div class="instagram_content">
+      <a href="">
+        <img class="instagram_photo" src="{% static 'images/instagram3.png' %}" alt="">
+        <img class="instagram_icon" src="{% static 'icons/instagram.png' %}" alt="">
+      </a>
+    </div>
+
+    <div class="instagram_content">
+      <a href="">
+        <img class="instagram_photo" src="{% static 'images/instagram4.png' %}" alt="">
+        <img class="instagram_icon" src="{% static 'icons/instagram.png' %}" alt="">
+      </a>
+    </div>
+
+    <div class="instagram_content">
+      <a href="">
+        <img class="instagram_photo" src="{% static 'images/instagram5.png' %}" alt="">
+        <img class="instagram_icon" src="{% static 'icons/instagram.png' %}" alt="">
+      </a>
+    </div>
+
   </div>
 </div>
 

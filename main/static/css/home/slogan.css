@@ -1,0 +1,30 @@
+.slogan_block {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin: 20px;
+    }
+
+    a {
+        margin: 20px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-decoration: none;
+        background-color: var(--text-color);
+        padding: 10px 30px;
+        color: var(--background-color);
+        font-size: .9em;
+    }
+}

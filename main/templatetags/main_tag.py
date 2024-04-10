@@ -11,3 +11,8 @@ def show_home_block():
 @register.inclusion_tag('main/tags/show_home_catalog.html')
 def show_home_catalog():
     pass
+
+
+@register.inclusion_tag('main/tags/mobile_menu.html')
+def mobile_menu():
+    pass

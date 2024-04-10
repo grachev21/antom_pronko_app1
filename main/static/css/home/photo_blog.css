@@ -1,0 +1,127 @@
+.photo_blog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.left_blog_img {
+    position: relative;
+    width: 580px;
+    height: 580px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h1 {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        color: var(--text-color-grey);
+        z-index: 50;
+        pointer-events: none;
+        font-weight: 500;
+    }
+
+    img {
+        width: 580px;
+        height: 580px;
+        background-position: center;
+        object-fit: cover;
+        transition: .9s;
+    }
+}
+
+.right_blog_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 580px;
+    height: 580px;
+    margin: 5px;
+}
+
+.top_blog_img {
+    position: relative;
+    margin: 5px;
+    width: 570px;
+    height: 285px;
+
+    h1 {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        color: var(--text-color-grey);
+        z-index: 50;
+        pointer-events: none;
+        font-weight: 500;
+    }
+
+    img {
+        width: 570px;
+        height: 285px;
+        background-position: center;
+        object-fit: cover;
+        transition: .9s;
+    }
+}
+
+.bottom_blog_img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+    width: 570px;
+    height: 285px;
+}
+
+.left_img {
+    position: relative;
+    width: 280px;
+    height: 280px;
+
+    h1 {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        color: var(--text-color-grey);
+        z-index: 50;
+        pointer-events: none;
+        font-weight: 500;
+    }
+
+    img {
+        width: 280px;
+        height: 280px;
+        background-position: center;
+        object-fit: cover;
+        transition: .9s;
+    }
+
+}
+
+.right_img {
+    position: relative;
+    width: 280px;
+    height: 280px;
+
+    h1 {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+        color: var(--text-color-grey);
+        z-index: 50;
+        pointer-events: none;
+        font-weight: 500;
+    }
+
+    img {
+        width: 280px;
+        height: 280px;
+        background-position: center;
+        object-fit: cover;
+        transition: .9s;
+    }
+}

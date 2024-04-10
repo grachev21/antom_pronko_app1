@@ -4,7 +4,20 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{% static '/css/settings.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/animation.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/content.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/header.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/mobile_menu.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/slogan.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/images_line.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/hot_deal.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/photo_blog.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/instagram.css' %}" />
+  <link rel="stylesheet" href="{% static '/css/home/adaptability.css' %}" />
 
   <!-- Favicons for different platforms -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,16 +37,41 @@
       {% block hot_deal %}{% endblock hot_deal %}
       {% block photo_blog %}{% endblock photo_blog %}
       {% block instagram %}{% endblock instagram %}
-          
-        
-        
+
+
+
 
 
       <img src="{% static '/images/main_bg_img.jpg' %}" alt="" class="background" />
+
+      <footer>
+        <div class="block_footer">
+          <div class="element">
+            <div class="logo"></div>
+            <div class="comments_1"></div>
+            <div class="icons"></div>
+          </div>
+
+          <div class="element_2">
+            <div class="title"></div>
+            <div class="list"></div>
+          </div>
+          <div class="element_3">
+            <div class="title"></div>
+            <div class="list"></div>
+          </div>
+          <div class="element_4">
+            <div class="title"></div>
+            <div class="list"></div>
+          </div>
+
+        </div>
+
+      </footer>
     </div>
   </div>
 
-  <script src="{% static './js/home.js' %}"></script>
+  <script type="module" src="{% static './js/home.js' %}"></script>
 
 </body>
 

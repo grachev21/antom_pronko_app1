@@ -1,23 +1,8 @@
-window.onload = function main() {
-    // Check window ***************************
-    if (window.innerWidth < 1200) {
-        mobile(true)
-        show_block(false)
-    } else {
-        mobile(false)
-        show_block(true)
-    }
+import { mobile_menu } from './mobile_menu.js';
 
-    window.addEventListener('resize', function () {
-        let width = document.body.clientWidth;
-        if (width < 1200) {
-            mobile(true)
-            show_block(false)
-        } else {
-            mobile(false)
-            show_block(true)
-        }
-    });
+window.onload = function main() {
+
+    show_block()
 
     // Show block *****************************
     function show_block(flag) {
@@ -35,63 +20,26 @@ window.onload = function main() {
                 }
             }
         }
-        function show(class_name, name, block) {
-
-
+        function show(name, block) {
             let left = document.getElementById(name).offsetLeft
             let on = `z-index: 50; top: 40px; opacity: 100%; transition: opacity 1s, top .3s; left: ${left - 20}px;`
-            document.querySelector(".show_home_block").style.cssText = on
-            document.querySelector(block).style.cssText = `visibility: inherit;`
+            document.querySelector(".show_home_block").setAttribute("style", on);
+            document.querySelector(block).setAttribute("style", "visibility: inherit;")
         }
 
-        function hide(params) {
-            let block = document.getElementById("show_home_block")
+        function hide() {
             let left = document.getElementById("show_home_block").offsetLeft
             let off = `visibility: hidden; top: 83px; left: ${left}px; opacity: 0%; transition: .1s;`
-            document.querySelector(".show_home_block").style.cssText = off
+            document.querySelector(".show_home_block").setAttribute("style", off);
 
             let all_blocks = document.getElementById("show_home_block").children
             for (let index = 0; index < all_blocks.length; index++) {
-                all_blocks[index].style.cssText = `visibility: hidden; transition: .1s;`
+                all_blocks[index].setAttribute("style", "visibility: hidden; transition: .1s;");
             }
         }
     }
 
-    // Adaptability ***************************
-    function mobile(flag) {
-        if (flag) {
-            offHoverAfter()
-            document.querySelector(".menu_open").setAttribute("style", "display: block;")
-            document.querySelector(".info_text").classList.add("adaptability");
-
-            document.querySelector("body").onclick = function (event) {
-                let target = event.target
-                if (target.className == "menu_open") {
-                    document.querySelector(".info_text").setAttribute("style", "left: 0px; transition: left .3s;")
-                } else {
-                    document.querySelector(".info_text").setAttribute("style", "left: -320px; transition: left .3s;")
-                }
-            }
-
-        } else {
-            document.querySelector(".menu_open").setAttribute("style", "display: none;")
-            onHoverAfter()
-            document.querySelector(".panel").setAttribute("style", "display: none;");
-            document.querySelector(".info_text").classList.remove("adaptability");
-        }
-    }
-    function onHoverAfter() {
-        let activ_hover = document.querySelectorAll(".info_text > a")
-        for (let index = 0; index < activ_hover.length; index++) {
-            activ_hover[index].classList.add("activ_hover_after");
-        }
-    }
-    function offHoverAfter() {
-        let activ_hover = document.querySelectorAll(".info_text > a");
-        for (let index = 0; index < activ_hover.length; index++) {
-            activ_hover[index].classList.remove("activ_hover_after");
-        }
-    }
+    mobile_menu()
 
     // Images line ****************************************
     const links = document.querySelectorAll(".links_shop>.links");
@@ -115,10 +63,10 @@ window.onload = function main() {
 
     for (let index = 0; index < images_hot_deal.length; index++) {
         images_hot_deal[index].addEventListener("mouseover",
-            function () { panel_links[index].style.cssText = `opacity: 70%; bottom: 120px; transition: .9s;` }
+            function () { panel_links[index].setAttribute("style", "opacity: 70%; bottom: 120px; transition: .9s;") }
         )
         images_hot_deal[index].addEventListener("mouseleave",
-            function () { panel_links[index].style.cssText = `opacity: 0%; bottom: 50px; transition: .9s;` }
+            function () { panel_links[index].setAttribute("style", "opacity: 0%; bottom: 50px; transition: .9s;") }
         )
     }
 
@@ -142,13 +90,20 @@ window.onload = function main() {
         )
     }
 
-    const instagram = document.querySelectorAll(".instagram_img > a > img");
+    const instagram = document.querySelectorAll(".instagram_photo");
+    const instagram_icon = document.querySelectorAll(".instagram_icon");
     for (let index = 0; index < instagram.length; index++) {
         instagram[index].addEventListener("mouseover",
-            function () { this.classList.add("zoom", "blackout") }
+            function () {
+                this.classList.add("zoom", "blackout");
+                instagram_icon[index].setAttribute("style", "opacity: 100%; transition: .9s;");
+            }
         )
         instagram[index].addEventListener("mouseleave",
-            function () { this.classList.remove("zoom", "blackout") }
+            function () {
+                this.classList.remove("zoom", "blackout")
+                instagram_icon[index].setAttribute("style", "opacity: 0%; transition: .9s;");
+            }
         )
     }
 
