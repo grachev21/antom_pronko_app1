@@ -1,8 +1,0 @@
-@media not (min-width: 1200px) {
-    .menu_open {
-        display: block;
-    }
-    .info_text {
-        display: none;
-    }
-}
